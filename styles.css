@@ -1,0 +1,172 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #d3d3d3; /* Fundo cinza claro */
+    color: #000000; /* Texto preto para contraste */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Esconder overflow horizontal */
+}
+
+/* Contêiner principal para aplicar flexbox */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-x: hidden; /* Esconder overflow horizontal */
+}
+
+/* Estilo básico para o navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    overflow-x: hidden; /* Esconder overflow horizontal */
+}
+
+/* Estilo para o cabeçalho do navbar */
+#navbar header {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+    pointer-events: none; /* Desativa a interação do mouse */
+}
+
+/* Estilo para a lista de navegação */
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para os links de navegação */
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background 0.3s;
+}
+
+#navbar ul li a:hover {
+    background: #575757;
+}
+
+/* Estilo para o conteúdo principal */
+#main-doc {
+    margin-left: 220px; /* Ajustar a margem para o lado esquerdo para evitar sobreposição */
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    flex: 1; /* Flexível para ocupar o espaço restante */
+    overflow-x: hidden; /* Esconder overflow horizontal */
+}
+
+/* Estilo para as seções */
+.main-section {
+    margin-bottom: 40px;
+}
+
+.main-section header {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2d2d2d;
+}
+
+/* Estilo para os parágrafos */
+.main-section p {
+    margin-bottom: 10px;
+    color: #000; /* Texto preto */
+}
+
+/* Estilo para os blocos de código */
+.main-section code {
+    display: block;
+    background: #2d2d2d; /* Fundo escuro */
+    border: 5px solid #ffcc00; /* Borda amarela */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    color: #f8f8f2; /* Texto claro */
+}
+
+/* Estilo para as listas */
+.main-section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #000; /* Texto preto */
+}
+
+.main-section ul li {
+    margin-bottom: 5px;
+}
+
+/* Estilo para a imagem de capa */
+.image-container {
+    width: calc(100% - 220px); /* Largura ajustada para a imagem */
+    height: 200px; /* Altura fixa para a imagem de capa */
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 220px; /* Ajusta para a largura do navbar */
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo para o rodapé */
+#footer {
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto branca */
+    text-align: center; /* Alinhar o texto ao centro */
+    padding: 15px 20px;
+    width: 100%; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 1.1em;
+}
+
+/* Media query para dispositivos menores */
+@media (max-width: 768px) {
+    #navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        box-shadow: none; /* Remove sombra para melhorar visualização */
+    }
+    #main-doc {
+        margin-left: 0;
+        padding-top: 200px; /* Ajusta para o navbar */
+    }
+    .image-container {
+        left: 0;
+        width: 100%;
+    }
+    /* Criar um botão de menu para dispositivos pequenos */
+    #navbar ul {
+        display: none; /* Esconde o menu por padrão */
+    }
+    #navbar.open ul {
+        display: block; /* Exibe o menu quando o botão for clicado */
+    }
+}

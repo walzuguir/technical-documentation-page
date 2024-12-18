@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Comprehensive technical documentation on HTML, CSS, JavaScript, Python, and Apex.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Python, Apex, Documentation, Web Development">
+</head>
+<body>
+    <nav id="navbar" role="navigation" aria-label="Documentation Menu">
+        <header>Technical Documentation</header>
+        <ul>
+            <li><a href="#html" class="nav-link" aria-label="HTML Section">HTML</a></li>
+            <li><a href="#css" class="nav-link" aria-label="CSS Section">CSS</a></li>
+            <li><a href="#javascript" class="nav-link" aria-label="JavaScript Section">JavaScript</a></li>
+            <li><a href="#python" class="nav-link" aria-label="Python Section">Python</a></li>
+            <li><a href="#apex" class="nav-link" aria-label="Apex Section">Apex</a></li>
+        </ul>
+    </nav>
+    
+    <div class="image-container"> <img src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg" alt="Most Used Programming Languages"> </div>
+
+    <main id="main-doc">
+        
+        <section class="main-section" id="html">
+            <header>HTML</header>
+            <p>HTML (HyperText Markup Language) é a linguagem padrão para a criação de páginas web. Ela define a estrutura de um documento web através de uma série de elementos.</p>
+            <p>Os elementos HTML são os blocos de construção de todas as páginas da web. Eles são representados por tags e podem conter texto, links, imagens, entre outros conteúdos.</p>
+            <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &lt;head&gt;<br>
+                &lt;title&gt;Título da Página&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                &lt;h1&gt;Cabeçalho Principal&lt;/h1&gt;<br>
+                &lt;p&gt;Este é um parágrafo.&lt;/p&gt;<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;
+            </code>
+            <ul>
+                <li><strong>!DOCTYPE html</strong>: Declaração do tipo de documento, que define a versão do HTML.</li>
+                <li><strong>html</strong>: Elemento raiz que envolve todo o conteúdo do documento.</li>
+                <li><strong>head</strong>: Contém metadados sobre o documento, como o título.</li>
+                <li><strong>body</strong>: Contém o conteúdo visível da página, como cabeçalhos e parágrafos.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="css">
+            <header>CSS</header>
+            <p>CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou XML.</p>
+            <p>Com o CSS, você pode controlar a cor do texto, o estilo das fontes, o espaçamento entre parágrafos, como os elementos são posicionados e dispostos, entre outras coisas.</p>
+            <code>
+                body {<br>
+                &nbsp;&nbsp;color: black;<br>
+                &nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+                }<br>
+                h1 {<br>
+                &nbsp;&nbsp;color: blue;<br>
+                }
+            </code>
+            <ul>
+                <li><strong>body</strong>: Seletor que aplica estilos ao corpo do documento.</li>
+                <li><strong>color</strong>: Define a cor do texto.</li>
+                <li><strong>font-family</strong>: Define a família de fontes do texto.</li>
+                <li><strong>h1</strong>: Seletor que aplica estilos ao cabeçalho de nível 1.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="javascript">
+            <header>JavaScript</header>
+            <p>JavaScript é uma linguagem de programação que permite a criação de conteúdo dinâmico e interativo em páginas web.</p>
+            <p>Ele pode ser usado para atualizar dinamicamente o conteúdo de uma página, validar dados de formulários, criar animações, entre outras funcionalidades.</p>
+            <code>
+                document.getElementById("demo").innerHTML = "Hello JavaScript!";
+            </code>
+            <ul>
+                <li><strong>document.getElementById</strong>: Método que retorna o elemento com o ID especificado.</li>
+                <li><strong>innerHTML</strong>: Propriedade que define ou retorna o conteúdo HTML interno de um elemento.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="python">
+            <header>Python</header>
+            <p>Python é uma linguagem de programação de alto nível, conhecida por sua sintaxe clara e código legível.</p>
+            <p>Ela é amplamente utilizada em desenvolvimento web, ciência de dados, automação, e muitas outras áreas.</p>
+            <code>
+                print("Hello, Python!")
+            </code>
+            <ul>
+                <li><strong>print</strong>: Função que imprime a mensagem passada como argumento no console.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="apex">
+            <header>Apex</header>
+            <p>Apex é uma linguagem de programação proprietária da Salesforce, usada para desenvolver aplicativos personalizados na plataforma Salesforce.</p>
+            <p>Ela permite aos desenvolvedores adicionar lógica comercial e interações com banco de dados nos aplicativos Salesforce.</p>
+            <code>
+                public class MyClass {<br>
+                &nbsp;&nbsp;public static void myMethod() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;System.debug('Hello, Apex!');<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </code>
+            <ul>
+                <li><strong>public class</strong>: Declaração de uma classe pública em Apex.</li>
+                <li><strong>public static void myMethod</strong>: Declaração de um método público e estático que não retorna valor.</li>
+                <li><strong>System.debug</strong>: Método que imprime a mensagem passada como argumento no console de depuração.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="footer">
+         <p>Documentação Técnica</p>
+    </footer>
+
+</body>
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('navbar').classList.toggle('open');
+});
+</script>
+</html>
